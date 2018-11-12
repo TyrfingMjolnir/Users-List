@@ -29,19 +29,14 @@ class UsersVC: UITableViewController {
         let user = temporaryUsers[indexPath.row]
         
         cell.textLabel?.text = user
-        
-        return cell
-        
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        if( indexPath.row % 3 == 0 ) {
+          cell.backgroundColor = UIColor( red: 0.5, green: 1.0, blue: 0.75, alpha: 1.0 )
+        } else if( indexPath.row % 3 == 1 ) {
+          cell.backgroundColor = UIColor( red: 0.5, green: 1.0, blue: 0.75, alpha: 0.7 )
+        } else {
+          cell.backgroundColor = UIColor( red: 0.5, green: 1.0, blue: 0.75, alpha: 0.5 )
+        }
 
+        return cell
+    }
 }
